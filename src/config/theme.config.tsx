@@ -22,7 +22,6 @@ export enum themePaletteConfig{
 
 const theme = createTheme({
     palette:{
-        mode:"dark",
         primary:{
             main: themePaletteConfig.PRIMARY_BLUE
         },
