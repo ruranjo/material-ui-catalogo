@@ -1,0 +1,228 @@
+@use '../../../styles/variables';
+
+.footer-container{ 
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    @media screen and (max-width: variables.$width-desktop) {
+        background-color: variables.$primary-yellow;
+        overflow: inherit;
+        margin-top: 6rem;
+    }
+    @media screen and (max-width: variables.$width-table) {
+        height: 40rem;
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        height: 50rem;
+        margin-top: 10rem;
+    }
+        
+}
+
+.container-information{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 2rem;
+    z-index: 10;
+
+    @media screen and (max-width: variables.$width-desktop) {
+        align-items: center;
+        background-color: variables.$primary-yellow;
+    }
+    @media screen and (max-width: variables.$width-table) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.text-container{
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    color: variables.$primary-blue;
+
+    &  h2{
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 900;
+      color: variables.$primary-gray-dark;
+    }
+
+    & > p{
+         font-size: large;
+         font-weight: 800;
+         color: variables.$secondary-blue;
+    }
+    @media  screen and (max-width: 1040px) {
+         max-width: 300px;
+         &  h2{
+             font-size: 2rem;
+         }
+         & > p{
+             font-size: medium;
+             text-align: center;
+         }
+    }
+ }
+
+.background-ondas{
+    position: absolute;
+    width: 110%;
+    height: 1000px;
+    top: -8rem;
+    right: 0rem;
+    @media screen and (max-width: variables.$width-desktop) {
+        top: -10rem;
+        right: 0rem;
+        height: auto;
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        top: -6rem;
+        right: 0rem;
+        height: auto;
+    }
+}
+.footer-logo{
+  background-color: variables.$primary-blue;
+  border-radius: 1rem;
+  > .logo-img{
+    height: 5rem;
+    width: 10rem;
+  }
+
+  @media screen and (max-width: variables.$width-desktop) {
+    height: 2rem;
+    width: 6rem;
+    
+    > .logo-img{
+        height: 2rem;
+        width: 4rem;
+    } 
+  }
+}
+
+.info-links{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    @media screen and (max-width: variables.$width-mobile) {
+        flex-direction: column;
+        gap: 0.4rem;
+    } 
+}
+
+.message-reserved{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: variables.$primary-gray-dark;
+}
+
+.email-conteiner{
+    width: 100%;
+    height: 4rem;
+    border-bottom: 3px solid variables.$black;
+    display: flex;
+    justify-content: space-between;
+    
+    & svg{
+        width:2rem;
+        height: 2rem;
+        color: variables.$primary-blue;
+    }
+    & input{
+        font-size: small;
+        height: 100%;
+        width: 72%;
+        background-color: transparent;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.logo-smile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    max-width: 300px;
+
+    & .img-logo-smile{
+       width: 50%;
+    }
+    @media  screen and (max-width: variables.$width-desktop) {
+        max-width: 300px;
+        & .img-logo-smile{
+            width: 40%;
+        }
+    }
+    @media screen and (max-width: variables.$width-table) {
+        margin-bottom: 1rem;
+    } 
+}
+
+.social-message{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 6rem;
+    color: variables.$primary-gray-dark;
+
+    & h2{
+        margin: 0px;
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    @media  screen and (max-width: variables.$width-desktop) {
+        max-width: 300px;
+        text-align: center;
+        &  h2{
+            font-size: 2.2rem;
+        }
+    }
+    @media screen and (max-width: variables.$width-table) {
+        margin-bottom: 0.8rem;
+    } 
+}
+
+.icon-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & svg{
+        width: 3rem;
+        height: 3rem;
+        color: variables.$primary-gray-dark;
+    }
+}
+
+
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    @media screen and (max-width: variables.$width-table) {
+        margin-bottom: 1rem;
+    } 
+}

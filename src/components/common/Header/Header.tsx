@@ -1,6 +1,6 @@
 import './Header.scss'
 import React from 'react'
-import {logo} from '../../../utils/assets'
+import {images} from '../../../utils/assets'
 import { Button, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ const Header: React.FC<{}> = () => {
   return (
       <div className="header-container">
             <Link  to='/' state='home' >
-              <img className="header-logo" src={logo} alt="logo"/>
+              <img className="header-logo" src={images.logo} alt="logo"/>
             </Link>
 
             <div className="buttons-container">
