@@ -33,79 +33,67 @@
     &:focus{
         outline: none;
     }
-
-    .favorite-button-color{
-        color: variables.$primary-pink;
-    }
 }
 
+.favorite-button-color{
+    color: variables.$primary-pink !important;
+
+}
 
 .card-item-image{
   box-shadow: -2px 2px 10px 2px rgba(0, 0, 0, 0.15);
 }
-.card-custom-container{
+.card-content{
     padding: 10px 16px 0px 16px !important;
 }
-.card-custom-grid{
+.card-grid-content{
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
 
 }
-.card-custom-flex{
+
+.card-flex-content{
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
     & > *{
         margin: 0px;
         padding: 0px;
     }
+
     & h3{
-        font-size: x-large;
-        color: var(--color-blue-one);
+        font-size: large;
+        color: variables.$primary-blue;
     }
     & span{
-        font-size: 0.9rem;
-        text-decoration: line-through;
-        color: var(--color-gray-two);
+        font-size: 1rem;
+        text-decoration: line-through ;
+        color: variables.$primary-gray-dark;
     }
     & svg{
         font-size: 0.9rem;
         text-decoration: line-through;
-        color: var(--color-yellow-one);
+        color: variables.$primary-yellow;
     }
     & p{
         font-size: 0.8rem;
         margin: 0px;
-        color: var(--color-gray-two);
+        color: variables.$primary-gray-dark;
     }
     &:nth-child(2){
         align-items: flex-end;
     }
 }
-.card-item-text-date{
-    font-size: 0.8rem
-}
-.star-color{
-    color: var(--color-yellow-one) !important;
-    &  .css-1vooibu-MuiSvgIcon-root{
-        color: var(--color-yellow-one);
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-}
-.title-item-card{
-    white-space: nowrap; /* Evita el ajuste de línea */
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    text-overflow: ellipsis; 
-}
+
+
 .buy-button{
     color: variables.$primary-blue !important;
     &:hover{
         background: variables.$primary-blue !important;
         color: variables.$primary-yellow !important;
     }
-}
+}  
 .card-percentage-reduce{
     position: absolute;
     width: 5rem;

@@ -1,7 +1,7 @@
 import { createContext, useEffect, useReducer } from "react";
 import { StateData } from "../../interfaces/data.interface";
 import { ProductReducer } from "../../reducers";
-import { data } from "../../utils/datta";
+import { data } from "../../utils/data";
 
 export type ContextProps = {
     state: StateData

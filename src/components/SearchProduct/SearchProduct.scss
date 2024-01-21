@@ -1,0 +1,83 @@
+.container-serch{
+    width: 500px;
+    height: 35px;
+    display: flex;
+    & input[type="text"]{
+        width:300px;
+        background-color: transparent;
+        height: 80%;
+        border: none;
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+    }
+    & .color-container-serch{
+        background-color: var(--color-white-one);
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        & input[type="text"]{
+            color: var(--color-black-one);
+        }
+    }
+    & .MuiSvgIcon-root{
+        color:var(--color-gray-two) !important;
+        margin-right: 5px !important;
+        margin-left:0.5rem !important;
+    }
+    /* Selector serch-custom*/
+    & .MuiSelect-iconOutlined{
+        color:var(--color-white-one) !important;
+        z-index: 1 !important;
+        top: 5px !important;
+        right: 1px !important;
+    }
+    & .formControl-select{
+        width:160px !important;
+    }
+    & .MuiInputBase-formControl{
+        width:160px !important;
+    }
+    & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+        padding: 0px !important;
+        width: 160px !important;
+        display: grid;
+        place-items: center !important;
+        height: 30px !important;
+        color: var(--color-white-one) !important;
+        z-index: 3 !important;
+    }
+    & .MuiOutlinedInput-notchedOutline{
+        width: 150px !important;
+        height: 40px !important;
+        border: none !important;
+        background-color: var(--color-gray-three) !important;
+        border-top-right-radius: 25px !important;
+        border-bottom-right-radius: 25px !important; 
+        color: var(--color-white-one) !important;
+    }
+    & .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+        top:-6px !important;
+        color: var(--color-white-one) !important;
+        font-size: small !important;
+    }
+    & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+         color: transparent !important;
+    } 
+    & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
+        color: transparent !important;
+    }
+    & .css-p0rm37{
+        top:-6px !important;
+        color: var(--color-white-one) !important;
+        font-size: small !important;
+    }
+    & .css-1ald77x.Mui-focused {
+        color: transparent !important;
+    }
+    @media screen and (max-width: 840px) {
+        width: auto;
+        margin: auto;
+    }       
+}

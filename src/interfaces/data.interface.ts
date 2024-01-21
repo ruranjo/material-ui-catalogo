@@ -1,3 +1,9 @@
+export type FilterBoxType={
+  brand:string[],
+  rate:number[],
+  review_number:number
+}
+
 export interface StateData {
     products: Data[],
     single_product: ListProduct | {}

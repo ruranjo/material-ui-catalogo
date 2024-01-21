@@ -1,5 +1,5 @@
 import { ListProduct, StateData } from "../../interfaces/data.interface";
-import {data} from '../../utils/datta'
+import {data} from '../../utils/data'
 type ProductAction = 
 | {type:'GET_PRODUCTS', payload: {}}
 | {type:'GET_SINGLE_PRODUCT', payload: ListProduct}
