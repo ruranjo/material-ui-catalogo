@@ -5,13 +5,13 @@ export const listRoutes = [
         name:"Home"
     },
     {
-        url:["/item/celulares"],
-        path:"/item/celulares",
+        url:["/producto/celulares"],
+        path:"/producto/celulares",
         name:"Celulares"
     },
     {
-        url:["/item/motocicletas"],
-        path:"/item/motocicletas",
+        url:["/producto/motocicletas"],
+        path:"/producto/motocicletas",
         name:"Motocicletas"
     },
     {

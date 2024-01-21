@@ -20,6 +20,7 @@ const style = {
 };
 
 const Navbar = () =>{
+  
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -47,10 +48,10 @@ const Navbar = () =>{
            </ul>
 
             <div className="menu-mobile">
-              <IconButton onClick={handleOpen}><DensityMediumIcon/></IconButton>
+              <IconButton onClick={()=>handleOpen()}><DensityMediumIcon/></IconButton>
               <Modal
                 open={open}
-                onClose={handleClose}
+                onClose={()=>handleClose()}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
@@ -60,7 +61,7 @@ const Navbar = () =>{
                           listRoutes.map((item,index)=>{
                               return(
                                   <li key={index} className={isPathActivate(item.url)}>
-                                      <Link  to={item.path} state={item.name} >{item.name}</Link>
+                                      <Link onClick={()=>handleClose()} to={item.path} state={item.name} >{item.name}</Link>
                                   </li>
                               )   
                           })
