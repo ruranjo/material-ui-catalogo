@@ -1,5 +1,5 @@
 import './ViewProducts.scss'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ProductsContext } from '../../context/ProductContext/ProductsContext';
 import { FilterBox, ProductCard, SearchProduct } from '..';
 import { useLocation } from 'react-router-dom';
@@ -17,9 +17,24 @@ const ViewProducts: React.FC<{}> = () => {
         listProduct:[],
     }]
 
-    console.log(location.state);
+    useEffect(()=>{
+      console.log("holaasdasd")
+      setControlFilterBox({
+        brand:[],
+        rate:(list[0]?.rate)? list[0].rate:[1,10000],
+        review_number:0,
+    })
+    },[location.state])
+
+    const validate =(name:string,query:string)=>{
+      const aux1=name.toLocaleLowerCase();
+      const  aux2=query.toLocaleLowerCase();
+      return !aux1.includes(aux2);
+  }
+
     const list: Data[] = (state.products)? state.products.filter((product: Data) => product.name_page === location.state):dataEmpty;
 
+    
     const controlFilterBox:FilterBoxType={
         brand:list[0]?.brands??[],
         rate:(list[0]?.rate)?list[0].rate:[1,10000],
@@ -40,7 +55,10 @@ const ViewProducts: React.FC<{}> = () => {
         
 
        return list[0].listProduct.filter((item:ListProduct) => {
-            
+
+              if(serch.length>0 && validate(item.name,serch)){
+                return false
+              } 
               if((controlFilterBoxState.rate[0]>item.price || controlFilterBoxState.rate[1]<item.price)){
                 return false
               } 
@@ -51,7 +69,7 @@ const ViewProducts: React.FC<{}> = () => {
               if(controlFilterBoxState.review_number>0 && item.review_number < controlFilterBoxState.review_number){
                 return false;
               }
-              console.log(controlFilterBoxState.brand);
+
               return true
        })
 
@@ -63,11 +81,11 @@ const ViewProducts: React.FC<{}> = () => {
             <FilterBox controlFilterBox={controlFilterBox}  setstateControl={setControlFilterBox} stateControl={controlFilterBoxState}/>
         </div>
 
-        <div className="container-g-carditems-serch">
+        <div className="Productcards-serch-container">
           
           <SearchProduct serchString={serch} setSerchString={setSerch} />
 
-          <div className="cardproducts-container">
+          <div className="cardproducts-container" >
           {
               list && getItemFilter(list).map((prod,index)=>{
                   return (
@@ -85,33 +103,3 @@ const ViewProducts: React.FC<{}> = () => {
 }
 
 export default ViewProducts
-
-/*
-return (
-    <div className="container-viewitems">
-        <div className="container-controlBar">
-          <ControlBar controlBar={controlBar} stateControl={stateControl} setstateControl={setstateControl}/>
-        </div>
-        <div className="container-g-carditems-serch">
-            <Serch serchString={serchString} setSerchString={setSerchString}/>
-            <div className='modal-container-controlBar'>
-               <CustomizedDialogs
-                 buttonText={"Filter"}
-                 title='Filter'
-               >
-                    <ControlBar controlBar={controlBar} stateControl={stateControl} setstateControl={setstateControl}/>
-               </CustomizedDialogs>
-            </div>
-
-            <div className="container-grid-carditems">
-                {
-                    getItems().map((item:Item) => {
-                       return <CardItem key={item.id} item={item} listFavorite={listFavorite} setListFavorite={setListFavorite}/>
-                    })
-                }
-            </div>
-        </div>
-    </div>
-)
-
-*/

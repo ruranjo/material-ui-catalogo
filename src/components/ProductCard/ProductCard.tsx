@@ -1,27 +1,40 @@
 import './ProductCard.scss'
 import {  Button, Card, CardActions, CardContent, CardMedia, IconButton, Rating, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ListProduct } from '../../interfaces/data.interface';
 import {Favorite, FavoriteBorder}  from '@mui/icons-material';
+import { ProductsContext } from '../../context/ProductContext/ProductsContext';
+import { ModalProduct } from '..';
+
 
 interface props {
   product: ListProduct
 }
 
 const ProductCard:React.FC<props> = ({product}) => {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true); 
+    const handleClose = () => setOpen(false);
+
     const [isFavorite, setIsFavorite] = useState(false);
+    const {getSingleProduct} =  useContext(ProductsContext);
 
     const toggleFavorite = () =>{
       setIsFavorite(!isFavorite);
     }
 
+    const setSingleProduct = (product: ListProduct) =>{
+      getSingleProduct(product);
+    }
+    
     const styleCard = {
         maxWidth: 275,
         width: 275,
     }
 
   return (
-    <Card className="card" sx={styleCard}>
+    <>
+    <Card className="card" sx={styleCard}  onClick={() => setSingleProduct(product)}>
         
         <CardMedia
           sx={{ height: 340, maxWidth:275 }}
@@ -53,12 +66,16 @@ const ProductCard:React.FC<props> = ({product}) => {
               <div className="card-flex-content">
                     <Typography variant='h3'>${product.price - (product.price * (product.percentage_reduce/100))}</Typography>
                     <span>${product.price}</span>
-                    <Button variant="contained" color='secondary'  className="buy-button">lo quiero</Button>
+                    <Button variant="contained" color='secondary' className="buy-button" onClick={() => handleOpen()}>lo quiero</Button>
               </div>
           </div>
         </CardContent>
         <CardActions></CardActions>
     </Card>
+    {
+      open && <ModalProduct handleClose={handleClose} handleOpen={handleOpen} open={open} />
+    }
+    </>
   );
 }
 

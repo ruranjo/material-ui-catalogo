@@ -9,6 +9,10 @@ const productReducer = (state: StateData, action: ProductAction) => {
     case 'GET_PRODUCTS':
         return {...state, products: {...state.products, data}}
         break;
+
+    case 'GET_SINGLE_PRODUCT':
+      return {...state, single_product: action.payload}
+      break;
   
     default:
         return state;

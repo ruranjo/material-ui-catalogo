@@ -99,7 +99,7 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background-color: var(--color-red-one);
+    background-color: variables.$primary-pink !important;
     top: 14.5rem;
     left: 0.5rem;
     display: grid;
@@ -109,6 +109,6 @@
         margin: 0px;
         font-size: xx-large;
         font-weight: bold;
-        color: var(--color-white-one);
+        color: variables.$white !important;
     }
 }

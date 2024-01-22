@@ -30,15 +30,16 @@ const FilterBox:React.FC<props> = ({controlFilterBox, stateControl, setstateCont
         setstateControl({...stateControl,review_number:newValue})
     };
     return (
-        <div className='container-control-bar'>
-            <div className='container-control-bar-filter-select'>
+        <div className='filter-box-container-'>
+
+            <div className='title-filter-box'>
                 <h3>Ordenar por</h3>
-               
             </div>
-            <ul className='list-style-none list-Control-Bar'>
+
+            <ul className='list-filter-box'>
                 <li>
                     <h3>Marcas</h3>
-                    <div className='list-Control-checkbok'>
+                    <div className='checkbok-filter'>
                        {
                         controlFilterBox.brand.map((item,index)=>{
                             return (
@@ -52,12 +53,12 @@ const FilterBox:React.FC<props> = ({controlFilterBox, stateControl, setstateCont
                                 </div>
                             )
                         })
-                       }
+                       } 
                     </div>
                 </li>
                 <li>
                     <h3>Precios</h3>
-                    <div className='costRate'>
+                    <div className='costrate'>
                         <TextField
                             id="outlined-number"
                             label={controlFilterBox.rate[0].toString()}
@@ -71,7 +72,7 @@ const FilterBox:React.FC<props> = ({controlFilterBox, stateControl, setstateCont
                             shrink: true,
                         }}
                         />
-                        <hr/>
+                        
                         <TextField
                             id="outlined-number"
                             size="small"
@@ -91,7 +92,7 @@ const FilterBox:React.FC<props> = ({controlFilterBox, stateControl, setstateCont
                 <li>
                     <h3>Reviews</h3>
                     <Rating
-                        name="simple-controlled"
+                        name="simple"
                         value={value}
                         onChange={(event, newValue) => {
                             event.preventDefault();

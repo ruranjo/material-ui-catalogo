@@ -6,7 +6,7 @@ export type FilterBoxType={
 
 export interface StateData {
     products: Data[],
-    single_product: ListProduct | {}
+    single_product: ListProduct
 }
 
 export interface Data {

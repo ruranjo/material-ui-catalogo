@@ -1,97 +1,72 @@
-.container-control-bar{
+@use '../../styles/variables';
+
+.filter-box-container{
+    
     width: 100%;
     max-width: 280px;
     margin: auto;
   }
-  .container-control-bar-filter-select{
-      display: grid;
-      grid-template-columns: 38% 62%;
-      border:1px solid var(--color-gray-two );
+  .title-filter-box{
+      display: flex;
+      width: 100px;
+      border:1px solid variables.$primary-gray-dark;
       border-radius: 5px;
       height: 30px;
       & h3{
-          margin: 0px;
-          display: grid;
-          place-items: center;
-          font-size: medium;
-          height: 30px;
-          color:var(--color-gray-two);
-          font-weight: 400;
-      }
-      & fieldset{
-          border: none !important;
-          border-left: 1px solid var(--color-gray-two) !important;
-          border-radius: 0px !important;
-          height: 34px !important;
-      }
-      & label{
-          color:var(--color-black-one) !important;
-          z-index: 10 !important;
-          background-color: var(--color-gray-one) !important;
-          font-weight: 600 !important;
-          top: -10px !important;
-          transition: all 0.5s !important;
-      }
-      & .MuiSelect-iconOutlined{
-          z-index: 1 !important;
-          top: 5px !important;
-          right: 1px !important;
-      }
-      & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
-          display: grid !important;
-          place-items: center !important;
-          height: 30px !important;
-          padding: 0px !important;
-      }
-      & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
-          visibility: hidden !important;
-          opacity: 0 !important;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        font-size: medium;
+        height: 30px;
+        color: variables.$primary-gray-dark;
+        font-weight: 400;
       }
   }
-  .list-Control-Bar{
-      background-color: var(--color-white-one);
+
+  .list-filter-box{
+    list-style:none;
+    text-decoration: none;
+      background-color: variables.$white;
       width: 100%;
       max-width: 280px;
-      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
       & li{
-          border-bottom: 1px solid var(--color-gray-one);
+          border-bottom: 1px solid variables.$primary-gray-dark;;
           padding: 1rem;
           padding-left: 1rem;
   
           & h3{
-              color: var(--color-blue-one);
+              color: variables.$primary-blue;
               margin: 0px;
               font-size: small;
               margin-bottom: 1rem;
           }
-          & .costRate{
+          & .costrate{
               display: flex;
               gap: 0.5rem;
               & input[type="number"]{
                   background: transparent;
-                  border: 2px solid var(--color-gray-one);
+                  border: 2px solid variables.$primary-gray-dark;
                   width: 100%;
                   height: 2rem;
                   border-radius: 4px;
-                  color: var(--color-black-one);
+                  color: variables.$black;
               }
               & hr{
                   width: 1rem;
                   height: 0.5px;
                   margin: auto;
-                  background-color: var(--color-gray-one);
+                  background-color: variables.$primary-gray-dark;
               }
           }
       }
   }
-  .list-Control-checkbok{
-      color:var(--color-black-one);
+
+  .checkbok-filter{
+      color: variables.$black;
       height: 10rem;
       overflow-y: auto;
   }
-  .formControl-select{
-  
-      & .MuiSelect-nativeInput{
-          border: 1px solid red !important;
-      }
-  }
+ 
