@@ -18,6 +18,9 @@ const ProductCard:React.FC<props> = ({product,small}) => {
     const handleOpen = () => setOpen(true); 
     const handleClose = () => setOpen(false);
     const location = useLocation();
+    
+    console.log(location);
+
     const [isFavorite, setIsFavorite] = useState(false);
     const {getSingleProduct} =  useContext(ProductsContext);
     const navigate = useNavigate();
@@ -31,7 +34,6 @@ const ProductCard:React.FC<props> = ({product,small}) => {
     }
     
 
-    
     const styleCard = small ? {maxWidth: 175, width: 175} : {maxWidth: 275, width: 275}
   return (
     <>
@@ -42,7 +44,6 @@ const ProductCard:React.FC<props> = ({product,small}) => {
           image={product.images[0]}
           title={product.name}
           className="card-item-image"
-          
           onClick={()=>{navigate(location.pathname + `/${product.id}`)}}
         />
 
