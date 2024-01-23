@@ -9,7 +9,7 @@ interface Props {
   export default function Carousel(props: Props) {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedImage, setSelectedImage] = useState(props.images[0]);
-    const [loaded, setLoaded] = useState(false);
+    const [_loaded, setLoaded] = useState(false);
   
     useEffect  (() => {
       if (props.autoPlay || !props.showButtons) {
@@ -20,7 +20,7 @@ interface Props {
       }
     });
   
-    const selectNewImage = (index: number, images: string[], next = true) => {
+    const selectNewImage = (_index: number, images: string[], next = true) => {
       setLoaded(false);
       setTimeout(() => {
         const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0;
