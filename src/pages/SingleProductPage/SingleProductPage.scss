@@ -2,18 +2,19 @@
 
 
 .content-single-main{
+    
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     
-    & .center-content{
+    & .center-content-single{
         display: flex;
-        
         width: 80%;
     }
     @media screen and (max-width: variables.$width-mobile) {
         width: 100%;
+        margin-top: 0;
     }
     
 }
@@ -58,14 +59,21 @@
 
 .description{
     
+    .description-content{
+        display: flex;
+        flex-direction: column;
     
-    display: flex;
+        justify-content: space-between;
+    }
+    
+    display: flex; 
+
     & .main-photo{
         display: flex;
         align-items: center;
         
         & img{
-            min-width: 300px;
+            
             width:100%;
             height: auto;
         }
@@ -73,7 +81,7 @@
     }
     p{
     font-size: 12px;
-     width: 50%;       
+     width: 150px;       
     }
 
     @media screen and (max-width: variables.$width-table) {
@@ -87,6 +95,11 @@
             }
             
         }
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
     }
 }
 
@@ -134,12 +147,19 @@
 
 
 .center-content-single{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media screen and (max-width: variables.$width-table) {
         display: flex;
         flex-direction: column-reverse;
     }
     @media screen and (max-width: variables.$width-mobile) {
+        display: flex;
+        flex-direction: column-reverse;
         height: 50rem;
         margin-top: 10rem;
     }
 }
+
