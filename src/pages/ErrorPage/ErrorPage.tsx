@@ -1,14 +1,12 @@
+import { Box } from "@mui/material"
 
 const ErrorPage: React.FC<{}> = () => {
   
-    
-    
-
     return (
-    <div>
+    <Box sx={{width:500, height:500}}>
         ERROR
-    </div>
+    </Box>
   )
 }
 
-export default ErrorPage
+export default ErrorPage;

@@ -1,0 +1,147 @@
+@use '../../styles/variables';
+
+.single-product-main-container{
+   
+}
+
+.content-single-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+    & .center-content{
+        display: flex;
+        
+        width: 80%;
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        width: 100%;
+    }
+    
+}
+
+.url-product{
+    margin-top: 1rem ;
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+ 
+    & span{
+        font-size: 0.8rem;
+        padding-right: 1rem;
+        color: variables.$primary-gray-dark;
+    }
+    
+    & h6{
+        margin: 0 1rem 0 1rem;
+        color: variables.$primary-blue;
+    }
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    & img{
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    @media screen and (max-width: variables.$width-table) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.selected-photo{
+    border:2px solid variables.$primary-gray-dark;
+    border-radius: 10px;
+}
+
+.description{
+    
+    
+    display: flex;
+    & .main-photo{
+        display: flex;
+        align-items: center;
+        
+        & img{
+            min-width: 300px;
+            width:100%;
+            height: auto;
+        }
+        
+    }
+    p{
+    font-size: 12px;
+     width: 50%;       
+    }
+
+    @media screen and (max-width: variables.$width-table) {
+        width: 500px;
+        & .main-photo{
+          
+            & img{
+                min-width: 200px;
+                width:100%;
+                height: auto;
+            }
+            
+        }
+    }
+}
+
+.price-tag-week{
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: variables.$width-table) {
+        width: 180px;
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        width: 100px;
+    }
+}
+
+.price-tag{
+    span{
+        color: variables.$primary-gray-dark;
+    }
+    h3{
+        color: variables.$primary-blue;
+    }
+}
+
+.week-tag{
+    padding-top: 1.2rem;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    background-color: variables.$primary-pink;
+    border-radius: 50px;
+    line-height:0.1rem;
+    span{
+        color: variables.$primary-gray-dark;
+    }
+    h3{
+        color: variables.$primary-blue;
+    }
+}
+
+.column-direction{
+    display: flex;
+    flex-direction: column;
+}
+
+.center-content{
+    @media screen and (max-width: variables.$width-table) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    @media screen and (max-width: variables.$width-mobile) {
+        height: 50rem;
+        margin-top: 10rem;
+    }
+}

@@ -36,9 +36,9 @@ const HomePage: React.FC<{}> = () => {
             <Typography textAlign={'center'} fontWeight={600} color="primary" variant='h3'>Los favoritos de la semana</Typography>
             <div className='favorites'>
             {
-                state.products[0].listProduct.slice(0,4).map((product)=>{
+                state.products[0].listProduct.slice(0,4).map((product,index)=>{
                     return(
-                        <ProductCard  product={product} small={true} />
+                        <ProductCard  product={product} small={true} key={index}/>
                     )
                 })
             }   

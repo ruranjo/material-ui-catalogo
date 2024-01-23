@@ -25,7 +25,7 @@ const ProductCard:React.FC<props> = ({product,small}) => {
       setIsFavorite(!isFavorite);
     }
 
-    console.log(location)
+    
     const setSingleProduct = (product: ListProduct) =>{
       getSingleProduct(product);
     }
