@@ -12,6 +12,7 @@ const AppRouter: React.FC<{}> = () => {
             <Route path='/material-ui-catalogo/home' element={<HomePage/>}/>
             <Route path='/material-ui-catalogo/producto/:name' element={<ProductPage/>}/>
             <Route path='/material-ui-catalogo/producto/:name/:id' element={<SingleProductPage/>}/>
+            <Route path='/material-ui-catalogo/home/:id' element={<SingleProductPage/>}/>
             <Route path='*' element={<ErrorPage/>}/>
         </Route>
     </Routes>

@@ -10,7 +10,7 @@ import { Typography } from '@mui/material'
 const ProductPage: React.FC<{}> = () => {
   const {state} =  useContext(ProductsContext);
   return (
-    <div>
+    <div className='center-content'>
        <ViewProducts/>
        <div className='carousel-container-product'>
                 <Carousel images={hero} autoPlay/>

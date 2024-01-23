@@ -1,8 +1,5 @@
 @use '../../styles/variables';
 
-.single-product-main-container{
-   
-}
 
 .content-single-main{
     display: flex;
@@ -135,7 +132,8 @@
     flex-direction: column;
 }
 
-.center-content{
+
+.center-content-single{
     @media screen and (max-width: variables.$width-table) {
         display: flex;
         flex-direction: column-reverse;

@@ -18,7 +18,6 @@ const ViewProducts: React.FC<{}> = () => {
     }]
 
     useEffect(()=>{
-      console.log("holaasdasd")
       setControlFilterBox({
         brand:[],
         rate:(list[0]?.rate)? list[0].rate:[1,10000],
@@ -76,7 +75,7 @@ const ViewProducts: React.FC<{}> = () => {
     }
 
     return (
-    <div className="viewproducts-container">
+    <div className="viewproducts-container-view">
         <div>
             <FilterBox controlFilterBox={controlFilterBox}  setstateControl={setControlFilterBox} stateControl={controlFilterBoxState}/>
         </div>
@@ -85,7 +84,7 @@ const ViewProducts: React.FC<{}> = () => {
           
           <SearchProduct serchString={serch} setSerchString={setSerch} />
 
-          <div className="cardproducts-container" >
+          <div className="cardproducts-container-view" >
           {
               list && getItemFilter(list).map((prod,index)=>{
                   return (

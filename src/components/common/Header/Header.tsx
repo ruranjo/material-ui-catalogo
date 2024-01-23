@@ -8,8 +8,10 @@ import { Link } from 'react-router-dom';
 const Header: React.FC<{}> = () => {
   return (
       <div className="header-container">
-            <Link  to='/' state='home' >
-              <img className="header-logo" src={images.logo} alt="logo"/>
+            <Link  to='/material-ui-catalogo/' state='home' >
+             
+                <img className="header-logo" src={images.logo} alt="logo"/>
+              
             </Link>
 
             <div className="buttons-container">

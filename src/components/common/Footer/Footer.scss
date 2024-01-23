@@ -7,6 +7,7 @@
     margin: 0px;
     padding: 0px;
     overflow: hidden;
+
     @media screen and (max-width: variables.$width-desktop) {
         background-color: variables.$primary-yellow;
         overflow: inherit;
@@ -91,12 +92,18 @@
     }
 }
 .footer-logo{
-  background-color: variables.$primary-blue;
-  border-radius: 1rem;
-  > .logo-img{
-    height: 5rem;
-    width: 10rem;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: variables.$primary-blue;
+    border-radius: 1rem;
+
+    > .logo-img{
+        height: 3rem;
+        width: 10rem;
+    }
 
   @media screen and (max-width: variables.$width-desktop) {
     height: 2rem;
@@ -109,8 +116,10 @@
   }
 }
 
+
 .info-links{
     padding-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;

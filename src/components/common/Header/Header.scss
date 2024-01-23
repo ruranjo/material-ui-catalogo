@@ -48,6 +48,13 @@
     }
 }
 
+.logo-container{
+  display: flex;
+  justify-content: left;
+  border: 1px solid red;
+  width: 500px;
+}
+
 .buttons-container{
     display: flex;
     align-items: center;

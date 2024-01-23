@@ -1,10 +1,15 @@
 import './SingleProductPage.scss'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ProductsContext } from '../../context/ProductContext/ProductsContext';
 import { useLocation } from 'react-router-dom';
 import { Rating } from '@mui/material';
 
+
 const SingleProductPage: React.FC<{}> = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     const location  = useLocation();
     const {state} =  useContext(ProductsContext);
     const single = state.single_product;
@@ -22,7 +27,8 @@ const SingleProductPage: React.FC<{}> = () => {
         </div>
 
         <div className='content-single-main'>
-          <div className='center-content'>
+
+          <div className='center-content-single'>
             <div className='gallery' >
               {
                single && single.images.map((photo, index)=>{

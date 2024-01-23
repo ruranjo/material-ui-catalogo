@@ -1,4 +1,6 @@
-.viewproducts-container{
+@use '../../styles/variables';
+
+.viewproducts-container-view{
     
     width: 95%;
     display: grid;
@@ -11,18 +13,27 @@
       display: none;
     }
 
-    & .cardproducts-container{
-        width: 100%;
-        margin: auto;
-        height: 50rem;
-        overflow: scroll;
-       display: grid;
-       place-items: center;
-       gap: 1rem;
-       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    & .cardproducts-container-view{
+      display: grid;
+        
+      width: 100%;
+      margin: auto;
+      height: 50rem;
+      overflow: scroll;
+       
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         
        &::-webkit-scrollbar {
             width: 7px;
+        }
+
+        @media screen and (max-width: variables.$width-mobile) {
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: auto;
         }
     }
     
@@ -33,13 +44,18 @@
         width: 100%;
         gap: 1rem;
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: variables.$width-table) {
         gap: 0.3rem;
         grid-template-columns: 35% 65%;
       }
 
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: variables.$width-mobile) {
+
         grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 0rem;
         & .container-controlBar{
           display: none;
