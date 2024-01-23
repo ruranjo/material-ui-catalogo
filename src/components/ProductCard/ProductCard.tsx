@@ -5,42 +5,45 @@ import { ListProduct } from '../../interfaces/data.interface';
 import {Favorite, FavoriteBorder}  from '@mui/icons-material';
 import { ProductsContext } from '../../context/ProductContext/ProductsContext';
 import { ModalProduct } from '..';
+import {useLocation, useNavigate } from 'react-router-dom';
 
 
 interface props {
-  product: ListProduct
+  product: ListProduct;
+  small: boolean;
 }
 
-const ProductCard:React.FC<props> = ({product}) => {
+const ProductCard:React.FC<props> = ({product,small}) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true); 
     const handleClose = () => setOpen(false);
-
+    const location = useLocation();
     const [isFavorite, setIsFavorite] = useState(false);
     const {getSingleProduct} =  useContext(ProductsContext);
-
+    const navigate = useNavigate();
     const toggleFavorite = () =>{
       setIsFavorite(!isFavorite);
     }
 
+    console.log(location)
     const setSingleProduct = (product: ListProduct) =>{
       getSingleProduct(product);
     }
     
-    const styleCard = {
-        maxWidth: 275,
-        width: 275,
-    }
 
+    
+    const styleCard = small ? {maxWidth: 175, width: 175} : {maxWidth: 275, width: 275}
   return (
     <>
-    <Card className="card" sx={styleCard}  onClick={() => setSingleProduct(product)}>
+    <Card className="card" sx={styleCard}  onClick={() => {setSingleProduct(product)}}>
         
         <CardMedia
-          sx={{ height: 340, maxWidth:275 }}
+          sx= {{ height: 340, maxWidth:275 }}
           image={product.images[0]}
           title={product.name}
           className="card-item-image"
+          
+          onClick={()=>{navigate(location.pathname + `/${product.id}`)}}
         />
 
         <IconButton className="favorite-button" onClick={() => toggleFavorite()}>

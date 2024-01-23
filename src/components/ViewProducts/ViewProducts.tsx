@@ -89,7 +89,7 @@ const ViewProducts: React.FC<{}> = () => {
           {
               list && getItemFilter(list).map((prod,index)=>{
                   return (
-                    <ProductCard product={prod} key={index}/>
+                    <ProductCard product={prod} key={index} small={false} />
                   )
               })
           }

@@ -1,0 +1,17 @@
+.week-favorites{
+    width: 90%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+}
+
+.favorites{
+    margin-top: 5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    gap: .2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    border-radius: 1px solid red;
+}

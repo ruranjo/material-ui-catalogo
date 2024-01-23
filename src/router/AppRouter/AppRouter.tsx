@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from '../../components/common'
-import { ErrorPage, HomePage, ProductPage } from '../../pages'
+import { ErrorPage, HomePage, ProductPage, SingleProductPage } from '../../pages'
 
 
 const AppRouter: React.FC<{}> = () => {
@@ -11,6 +11,7 @@ const AppRouter: React.FC<{}> = () => {
             <Route path='/' element={<HomePage/>}/>
             <Route path='/home' element={<HomePage/>}/>
             <Route path='/producto/:name' element={<ProductPage/>}/>
+            <Route path='/producto/:name/:id' element={<SingleProductPage/>}/>
             <Route path='*' element={<ErrorPage/>}/>
         </Route>
     </Routes>
