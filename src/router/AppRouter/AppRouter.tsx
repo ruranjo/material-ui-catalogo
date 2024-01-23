@@ -7,11 +7,11 @@ import { ErrorPage, HomePage, ProductPage, SingleProductPage } from '../../pages
 const AppRouter: React.FC<{}> = () => {
   return (
     <Routes>
-        <Route path='/' element={<Layout/>}>
-            <Route path='/' element={<HomePage/>}/>
-            <Route path='/home' element={<HomePage/>}/>
-            <Route path='/producto/:name' element={<ProductPage/>}/>
-            <Route path='/producto/:name/:id' element={<SingleProductPage/>}/>
+        <Route path='/material-ui-catalogo/' element={<Layout/>}>
+            <Route path='/material-ui-catalogo/' element={<HomePage/>}/>
+            <Route path='/material-ui-catalogo/home' element={<HomePage/>}/>
+            <Route path='/material-ui-catalogo/producto/:name' element={<ProductPage/>}/>
+            <Route path='/material-ui-catalogo/producto/:name/:id' element={<SingleProductPage/>}/>
             <Route path='*' element={<ErrorPage/>}/>
         </Route>
     </Routes>
