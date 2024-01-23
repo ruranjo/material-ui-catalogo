@@ -1,37 +1,37 @@
 export const listRoutes = [
     {
-        url:["/home","/"],
-        path:"/home",
+        url:["/material-ui-catalogo/home","/"],
+        path:"/material-ui-catalogo/home",
         name:"Home"
     },
     {
-        url:["/producto/celulares"],
-        path:"/producto/celulares",
+        url:["/material-ui-catalogo/producto/celulares"],
+        path:"/material-ui-catalogo/producto/celulares",
         name:"Celulares"
     },
     {
-        url:["/producto/motocicletas"],
-        path:"/producto/motocicletas",
+        url:["/material-ui-catalogo/producto/motocicletas"],
+        path:"/material-ui-catalogo/producto/motocicletas",
         name:"Motocicletas"
     },
     {
-        url:["/service/tus-prestamos"],
-        path:"/item-details/tus-prestamos",
+        url:["/material-ui-catalogo/service/tus-prestamos"],
+        path:"/material-ui-catalogo/item-details/tus-prestamos",
         name:"Tus Prestamos"
     },
     {
-        url:["/service/tienda"],
-        path:"/service/tienda",
+        url:["/material-ui-catalogo/service/tienda"],
+        path:"/material-ui-catalogo/service/tienda",
         name:"Tienda"
     },
     {
-        url:["/service/tracking"],
-        path:"/service/tracking",
+        url:["/material-ui-catalogo/service/tracking"],
+        path:"/material-ui-catalogo/service/tracking",
         name:"Tracking"
     },
     {
-        url:["/service/club-macropay"],
-        path:"/service/club-macropay",
+        url:["/material-ui-catalogo/service/club-macropay"],
+        path:"/material-ui-catalogo/service/club-macropay",
         name:"Club Macropay"
     },
 ];
