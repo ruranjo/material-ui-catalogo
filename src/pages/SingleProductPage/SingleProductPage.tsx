@@ -72,10 +72,6 @@ const SingleProductPage: React.FC<{}> = () => {
                 </div>
 
             </div>
-
-            <div className='details' >
-
-            </div>
         </div>
         </div>
 
